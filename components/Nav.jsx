@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
+export const links = [
   {
     name: "home",
     path: "/",
@@ -39,7 +39,7 @@ function Nav() {
             href={link.path}
             className={`${
               link.path === pathname &&
-              "to-accent-hover border-b-2 border-accent-hover"
+              "text-accent-hover border-b-2 border-accent-hover"
             } capitalize font-medium hover:text-accent-hover transition-all`}
           >
             {link.name}
