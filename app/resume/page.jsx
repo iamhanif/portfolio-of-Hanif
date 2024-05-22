@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import {
   FaBootstrap,
@@ -175,16 +175,21 @@ const Resume = () => {
           defaultValue="experience"
           className="flex flex-col lg:flex-row gap-[60px]"
         >
-          <TabsList>
-            <TabsTrigger>Experience</TabsTrigger>
-            <TabsTrigger>Education</TabsTrigger>
-            <TabsTrigger>Skills</TabsTrigger>
-            <TabsTrigger>About me</TabsTrigger>
+          <TabsList className="flex flex-col w-full max-w-96 mx-auto lg:mx-0 gap-6">
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
           {/* content */}
 
-          <div>content</div>
+          <div className="w-full min-h-[70vh]">
+            {/* experience */}
+            <TabsContent value="experience" className="w-full">
+              experience
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </motion.div>
