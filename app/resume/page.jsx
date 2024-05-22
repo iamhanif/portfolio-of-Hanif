@@ -24,7 +24,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam reiciendis nam praesentium. Nesciunt, quia labore.",
+    "I am a detail-oriented and self-driven programmer. Proficient in HTML, CSS, JavaScript and React.js with familiarity in Next.js. I am eager to contribute as a frontend developer in an inspiring environment where I can receive invaluable mentorship and make significant strides in the web development realm. With a keen attention to detail, I deliver high-quality solutions and enhance user experience through proactive UX projects and codebase improvements.",
   info: [
     {
       fieldName: "Name",
@@ -296,8 +296,29 @@ const Resume = () => {
               </div>
             </TabsContent>
             {/* about */}
-            <TabsContent value="about" className="w-full">
-              about
+            <TabsContent
+              value="about"
+              className="w-full text-center lg:text-left"
+            >
+              <div className="flex flex-col gap-8">
+                <h3 className=" text-4xl font-bold">{about.title}</h3>
+                <p className="text-justify text-white/60 mx-auto lg:mx-0">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-8 max-w-[620px] mx-auto lg:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center lg:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-lg">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
