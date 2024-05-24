@@ -18,7 +18,12 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import {
+  SiMongodb,
+  SiNextdotjs,
+  SiOpenai,
+  SiTailwindcss,
+} from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
 const about = {
@@ -163,6 +168,10 @@ const skills = {
     {
       icon: <SiMongodb />,
       name: "mongodb",
+    },
+    {
+      icon: <SiOpenai />,
+      name: "Chatgpt",
     },
   ],
 };
